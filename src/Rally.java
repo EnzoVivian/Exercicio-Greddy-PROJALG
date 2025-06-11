@@ -8,7 +8,7 @@ public class Rally {
     public static void main (String[] args) {
         int d = 5;
         int L = 21;
-        int[] n = {4, 9, 11,12, 14, 18};
+        int[] n = {4, 9, 14, 18};
 
 
         var result = bestRallyPoint(d, L, n);
@@ -21,7 +21,7 @@ public class Rally {
 
         int offset = d;
         int pontoAtual = 0;
-        for (int i = 0; i < pontosParada.length-1; i++) {
+        for (int i = 0; i < pontosParada.length; i++) {
             int aux = consegueChegarAte(pontoAtual, offset, pontosParada, i, L);
             if(aux != -1){
                 result.add(aux);
@@ -43,7 +43,7 @@ public class Rally {
                 resp = ponto;
             }
         }
-        
+
         return resp;
         
     }
